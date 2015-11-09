@@ -7,11 +7,14 @@ public class reticle : MonoBehaviour {
 	Ray ray;
 	RaycastHit hit;
 
-	//public GameObject invkey = GameObject.Find ("keyicon");
+	public GameObject invkey;
+	public inventory inventoryManager;
 
 	// Use this for initialization
 	void Start () {
-		//invkey.SetActive (false);
+		invkey = GameObject.Find ("keyicon");
+		invkey.SetActive (false);
+		inventoryManager = GameObject.Find ("Inventory").GetComponent<inventory> ();
 	}
 	
 	// Update is called once per frame
@@ -30,12 +33,16 @@ public class reticle : MonoBehaviour {
 
 			//Specific object actions
 			if(Input.GetMouseButtonDown(0)){
+				//If the player click's on the door, open around parent pivot
 				if(hit.collider.name == "door"){
 					Debug.Log("OPEN SESAME BITCH");
-					hit.transform.Rotate(Vector3.up, 90);
+					hit.transform.parent.Rotate(Vector3.up, 90);
 				}
+
+				//If click on key, destroy world instance and add to inventory
 				if(hit.collider.name == "key"){
 					Debug.Log("Got a key!");
+					inventoryManager.addItem(hit.collider.name);
 					//invkey.SetActive (true);
 					Destroy(hit.transform.gameObject);
 				}
