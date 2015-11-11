@@ -2,7 +2,7 @@
 using System.Collections;
 
 public class flashlight : MonoBehaviour {
-
+	
 	public GameObject flash_light;
 	bool toggle = false;
 
@@ -14,11 +14,16 @@ public class flashlight : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		//When the player right-clicks, toggle the state of the flashlight
-		if(Input.GetMouseButtonDown(1)){
+		//When the player is alive and right-clicks, toggle the state of the flashlight
+		if(Input.GetMouseButtonDown(1)){ // && !gameMgr.dead){
 			toggle = !toggle;
 			flash_light.SetActive (toggle);
 			Debug.Log (flash_light.activeSelf);
 		}
+
+		/*Disable flashlight on death
+		if(false){
+			flash_light.SetActive (false);
+		}*/
 	}
 }

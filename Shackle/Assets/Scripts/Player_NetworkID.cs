@@ -4,8 +4,7 @@ using System.Collections;
 
 public class Player_NetworkID : NetworkBehaviour {
 
-	[SyncVar]
-	public string uniquePlayerIdentity;
+	[SyncVar] public string uniquePlayerIdentity;
 	private NetworkInstanceId networkPlayerID;
 
 	public override void OnStartLocalPlayer (){
@@ -21,7 +20,7 @@ public class Player_NetworkID : NetworkBehaviour {
 		}
 	}
 
-	//retrieve network ID from server, then tell it the new unique one created
+	//retrieve network ID, then tell the server the new unique one created
 	[Client]
 	void getNetIdentity (){
 		networkPlayerID = GetComponent<NetworkIdentity> ().netId;
