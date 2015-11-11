@@ -4,7 +4,7 @@ using System.Collections;
 
 public class GameManager : NetworkBehaviour {
 	
-	[SyncVar] public bool dead = false;
+	[SyncVar] public bool playersDead = false;
 	
 	// Use this for initialization
 	void Start () {
@@ -13,10 +13,17 @@ public class GameManager : NetworkBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if(Input.GetKeyDown(KeyCode.K)){
-			dead = true;
-			//CmdTellServerDeathState (true);
-		}
+
+	}
+
+	public void setMgrDeath(bool state){
+		playersDead = state;
+		CmdUpdateMgr(state);
+	}
+
+	[Command]
+	void CmdUpdateMgr(bool state){
+		playersDead = state;
 	}
 	
 }

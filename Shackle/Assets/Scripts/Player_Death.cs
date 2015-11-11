@@ -5,44 +5,38 @@ using System.Collections;
 
 public class Player_Death : NetworkBehaviour {
 
-	//private Image reticleImage;  (hook = "onDeathStateChange")
+	private Image reticleImage;
 	[SyncVar] public bool dead = false;
+	private bool once = false;
 
 	public GameObject deathOverlay;
+	public GameManager gameMgr;
 	public reticle reticleScript;
-	//private bool aboutToDie =;
 
 	// Use this for initialization
 	void Start () {
 		deathOverlay = GameObject.Find ("Death Overlay");
-		deathOverlay.SetActive(false);
-
-		//reticleImage = GameObject.Find ("reticle").GetComponent<Image>();
+		reticleImage = GameObject.Find ("reticle").GetComponent<Image>();
+		gameMgr = GameObject.Find ("GameManager").GetComponent<GameManager>();
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		Debug.Log (transform.name + " " + dead);
-		if(Input.GetKey(KeyCode.K) || dead){
+		if((Input.GetKey(KeyCode.K) || dead) && !once){
 			enterDeathState();
+			once = true;
+		} else if (once && !dead){
+			//LEAVE DEATH STATE
 		}
 	}
 	
 	void enterDeathState(){
 		dead = true;
-		deathOverlay.SetActive(true);
-		GetComponent<CharacterController>().enabled = false;
-		GetComponent<UnityStandardAssets.Characters.FirstPerson.FirstPersonController>().enabled = false;
+		reticleImage.enabled = false;
+		deathOverlay.transform.localPosition = new Vector3(0, 0, 0);
+		gameMgr .setMgrDeath(true);
 		if(isLocalPlayer) CmdTellServerDeathState (true);
 	}
-
-	/*void onDeathStateChange(bool deathState){
-		if(deathState == true){
-			deathOverlay.SetActive(true);
-			GetComponent<CharacterController>().enabled = false;
-			GetComponent<UnityStandardAssets.Characters.FirstPerson.FirstPersonController>().enabled = false;
-		}
-	}*/
 
 	//Inform the server of whether players are dead or alive, aka Sync it
 	[Command]

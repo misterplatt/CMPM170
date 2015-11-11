@@ -4,8 +4,8 @@ using System.Collections;
 
 public class Player_NetworkSetup : NetworkBehaviour {
 
-	[SerializeField] Camera CharacterCam;
-	[SerializeField] AudioListener audioListener;
+	public Camera CharacterCam;
+	public AudioListener audioListener;
 
 	// Use this for initialization
 	void Start () {

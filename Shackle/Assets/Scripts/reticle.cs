@@ -1,8 +1,9 @@
 ﻿using UnityEngine;
+using UnityEngine.Networking;
 using UnityEngine.UI;
 using System.Collections;
 
-public class reticle : MonoBehaviour {
+public class reticle : NetworkBehaviour {
 
 	Ray ray;
 	RaycastHit hit;
@@ -21,11 +22,11 @@ public class reticle : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		//If players are not dead, let reticle cast for interaction
-	   ray = Camera.main.ScreenPointToRay(new Vector3(Camera.main.pixelWidth/2, Camera.main.pixelHeight/2, 0));
+		if(NetworkServer.active) ray = Camera.main.ScreenPointToRay(new Vector3(Camera.main.pixelWidth/2, Camera.main.pixelHeight/2, 0));
 
 		//Reticle interaction options
 		if(Physics.Raycast(ray, out hit)){
-			Debug.Log(hit.collider.name);
+			//Debug.Log(hit.collider.name);
 
 			//Change reticle color when object is interactable
 			if(hit.collider.tag == "Interactable"){
