@@ -1,7 +1,6 @@
 ﻿using UnityEngine;
-
-using System.Collections;
 using UnityEngine.Networking;
+using System.Collections;
 
 public class Player_NetworkSetup : NetworkBehaviour {
 
@@ -11,6 +10,7 @@ public class Player_NetworkSetup : NetworkBehaviour {
 	// Use this for initialization
 	void Start () {
 		if (isLocalPlayer) {
+			//Enable certain elements on only the local player
 			GameObject.Find("Scene Camera").SetActive(false);
 			GetComponent<CharacterController>().enabled = true;
 			GetComponent<UnityStandardAssets.Characters.FirstPerson.FirstPersonController>().enabled = true;

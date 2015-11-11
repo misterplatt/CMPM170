@@ -19,8 +19,12 @@ public class reticle : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		ray = Camera.main.ScreenPointToRay(new Vector3(Camera.main.pixelWidth/2, Camera.main.pixelHeight/2, 0));
+		//If players are not dead, let reticle cast for interaction
+		if(!Player_Death.dead){
+			ray = Camera.main.ScreenPointToRay(new Vector3(Camera.main.pixelWidth/2, Camera.main.pixelHeight/2, 0));
+		}
 
+		//Reticle interaction options
 		if(Physics.Raycast(ray, out hit)){
 			Debug.Log(hit.collider.name);
 
