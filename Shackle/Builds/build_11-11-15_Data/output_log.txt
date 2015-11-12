@@ -24,4 +24,4 @@ desktop: 1920x1080 60Hz; virtual: 3840x1080 at 0,0
 <RI> Initialized touch support.
 Platform assembly: E:\GitHub\CMPM170\Shackle\Builds\build_11-11-15_Data\Managed\System.dll (this message is harmless)
 Setting up 1 worker threads for Enlighten.
-  Thread -> id: 5c8 -> priority: 1 
+  Thread -> id: f94 -> priority: 1 
