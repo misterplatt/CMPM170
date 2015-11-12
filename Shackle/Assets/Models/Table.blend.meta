@@ -1,0 +1,164 @@
+fileFormatVersion: 2
+guid: b2d96b11bb6eefa4e8e65bc0a3818e49
+timeCreated: 1447314226
+licenseType: Free
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: 1_Table_Leg
+    100002: 1_Table_Leg_001
+    100004: 1_Table_Leg_001_MeshPart0
+    100006: 1_Table_Leg_001_MeshPart1
+    100008: 1_Table_Leg_001_MeshPart2
+    100010: 1_Table_Leg_001_MeshPart3
+    100012: 1_Table_Leg_001_MeshPart4
+    100014: 1_Table_Leg_001_MeshPart5
+    100016: 1_Table_Leg_001_MeshPart6
+    100018: 1_Table_Leg_001_MeshPart7
+    100020: 1_Table_Leg_001_MeshPart8
+    100022: 1_Table_Leg_MeshPart0
+    100024: 1_Table_Leg_MeshPart1
+    100026: 1_Table_Leg_MeshPart2
+    100028: Cube
+    100030: Cube_001
+    100032: Cube_002
+    100034: Cube_003
+    100036: Plane_001
+    100038: //RootNode
+    400000: 1_Table_Leg
+    400002: 1_Table_Leg_001
+    400004: 1_Table_Leg_001_MeshPart0
+    400006: 1_Table_Leg_001_MeshPart1
+    400008: 1_Table_Leg_001_MeshPart2
+    400010: 1_Table_Leg_001_MeshPart3
+    400012: 1_Table_Leg_001_MeshPart4
+    400014: 1_Table_Leg_001_MeshPart5
+    400016: 1_Table_Leg_001_MeshPart6
+    400018: 1_Table_Leg_001_MeshPart7
+    400020: 1_Table_Leg_001_MeshPart8
+    400022: 1_Table_Leg_MeshPart0
+    400024: 1_Table_Leg_MeshPart1
+    400026: 1_Table_Leg_MeshPart2
+    400028: Cube
+    400030: Cube_001
+    400032: Cube_002
+    400034: Cube_003
+    400036: Plane_001
+    400038: //RootNode
+    2300000: 1_Table_Leg_001_MeshPart0
+    2300002: 1_Table_Leg_001_MeshPart1
+    2300004: 1_Table_Leg_001_MeshPart2
+    2300006: 1_Table_Leg_001_MeshPart3
+    2300008: 1_Table_Leg_001_MeshPart4
+    2300010: 1_Table_Leg_001_MeshPart5
+    2300012: 1_Table_Leg_001_MeshPart6
+    2300014: 1_Table_Leg_001_MeshPart7
+    2300016: 1_Table_Leg_001_MeshPart8
+    2300018: 1_Table_Leg_MeshPart0
+    2300020: 1_Table_Leg_MeshPart1
+    2300022: 1_Table_Leg_MeshPart2
+    2300024: Cube
+    2300026: Cube_001
+    2300028: Cube_002
+    2300030: Cube_003
+    2300032: Plane_001
+    3300000: 1_Table_Leg_001_MeshPart0
+    3300002: 1_Table_Leg_001_MeshPart1
+    3300004: 1_Table_Leg_001_MeshPart2
+    3300006: 1_Table_Leg_001_MeshPart3
+    3300008: 1_Table_Leg_001_MeshPart4
+    3300010: 1_Table_Leg_001_MeshPart5
+    3300012: 1_Table_Leg_001_MeshPart6
+    3300014: 1_Table_Leg_001_MeshPart7
+    3300016: 1_Table_Leg_001_MeshPart8
+    3300018: 1_Table_Leg_MeshPart0
+    3300020: 1_Table_Leg_MeshPart1
+    3300022: 1_Table_Leg_MeshPart2
+    3300024: Cube
+    3300026: Cube_001
+    3300028: Cube_002
+    3300030: Cube_003
+    3300032: Plane_001
+    4300000: Plane_001
+    4300002: Cube_003
+    4300004: Cube_002
+    4300006: Cube_001
+    4300008: Cube
+    4300010: 1_Table_Leg_001_MeshPart0
+    4300012: 1_Table_Leg_001_MeshPart1
+    4300014: 1_Table_Leg_001_MeshPart2
+    4300016: 1_Table_Leg_001_MeshPart3
+    4300018: 1_Table_Leg_001_MeshPart4
+    4300020: 1_Table_Leg_001_MeshPart5
+    4300022: 1_Table_Leg_001_MeshPart6
+    4300024: 1_Table_Leg_001_MeshPart7
+    4300026: 1_Table_Leg_001_MeshPart8
+    4300028: 1_Table_Leg_MeshPart0
+    4300030: 1_Table_Leg_MeshPart1
+    4300032: 1_Table_Leg_MeshPart2
+    7400000: Default Take
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 3
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

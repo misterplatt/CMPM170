@@ -1,0 +1,175 @@
+fileFormatVersion: 2
+guid: 3b0d0160308563242baf0e70353f786a
+timeCreated: 1447308893
+licenseType: Free
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: BezierCurve_003
+    100002: BezierCurve_004
+    100004: BezierCurve_005
+    100006: ChordCurve
+    100008: ChordShape
+    100010: ChordShape_001
+    100012: Circle
+    100014: Circle_000
+    100016: Circle_001
+    100018: Circle_002
+    100020: Circle_003
+    100022: Circle_007
+    100024: Cube
+    100026: Cube_001
+    100028: Cube_002
+    100030: Cube_003
+    100032: Cube_004
+    100034: Cube_005
+    100036: //RootNode
+    100038: OutletPlate
+    100040: Sphere
+    400000: BezierCurve_003
+    400002: BezierCurve_004
+    400004: BezierCurve_005
+    400006: ChordCurve
+    400008: ChordShape
+    400010: ChordShape_001
+    400012: Circle
+    400014: Circle_000
+    400016: Circle_001
+    400018: Circle_002
+    400020: Circle_003
+    400022: Circle_007
+    400024: Cube
+    400026: Cube_001
+    400028: Cube_002
+    400030: Cube_003
+    400032: Cube_004
+    400034: Cube_005
+    400036: //RootNode
+    400038: OutletPlate
+    400040: Sphere
+    2300000: BezierCurve_003
+    2300002: BezierCurve_004
+    2300004: BezierCurve_005
+    2300006: ChordCurve
+    2300008: ChordShape
+    2300010: ChordShape_001
+    2300012: Circle
+    2300014: Circle_000
+    2300016: Circle_001
+    2300018: Circle_002
+    2300020: Circle_003
+    2300022: Circle_007
+    2300024: Cube
+    2300026: Cube_001
+    2300028: Cube_002
+    2300030: Cube_003
+    2300032: Cube_004
+    2300034: Cube_005
+    2300036: OutletPlate
+    2300038: Sphere
+    3300000: BezierCurve_003
+    3300002: BezierCurve_004
+    3300004: BezierCurve_005
+    3300006: ChordCurve
+    3300008: ChordShape
+    3300010: ChordShape_001
+    3300012: Circle
+    3300014: Circle_000
+    3300016: Circle_001
+    3300018: Circle_002
+    3300020: Circle_003
+    3300022: Circle_007
+    3300024: Cube
+    3300026: Cube_001
+    3300028: Cube_002
+    3300030: Cube_003
+    3300032: Cube_004
+    3300034: Cube_005
+    3300036: OutletPlate
+    3300038: Sphere
+    4300000: ChordShape_001
+    4300002: Cube_004
+    4300004: Circle_007
+    4300006: Circle_003
+    4300008: Cube_005
+    4300010: OutletPlate
+    4300012: ChordShape
+    4300014: ChordCurve
+    4300016: Cube_003
+    4300018: Circle
+    4300020: Cube_002
+    4300022: Cube_001
+    4300024: Circle_002
+    4300026: Sphere
+    4300028: Cube
+    4300030: BezierCurve_005
+    4300032: BezierCurve_004
+    4300034: Circle_000
+    4300036: BezierCurve_003
+    4300038: Circle_001
+    7400000: Default Take
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 3
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
