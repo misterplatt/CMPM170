@@ -25,17 +25,28 @@ public class Player_Death : NetworkBehaviour {
 		if((Input.GetKey(KeyCode.K) || dead) && !once){
 			enterDeathState();
 			once = true;
-		} else if (once && !dead){
-			//LEAVE DEATH STATE
+		} else if (once && Input.anyKeyDown){
+			leaveDeathState();
+			once = false;
 		}
 	}
-	
+
+	//Removes reticle, brings in death overlay, and informs server/game manager of death
 	void enterDeathState(){
 		dead = true;
 		reticleImage.enabled = false;
 		deathOverlay.transform.localPosition = new Vector3(0, 0, 0);
 		gameMgr .setMgrDeath(true);
 		if(isLocalPlayer) CmdTellServerDeathState (true);
+	}
+
+	//Opposite of enter death state
+	void leaveDeathState(){
+		dead = false;
+		reticleImage.enabled = true;
+		deathOverlay.transform.localPosition = new Vector3(0, 300, 0);
+		gameMgr .setMgrDeath(false);
+		if(isLocalPlayer) CmdTellServerDeathState (false);
 	}
 
 	//Inform the server of whether players are dead or alive, aka Sync it

@@ -26,6 +26,7 @@ public class flashlight : NetworkBehaviour {
 		//Disable flashlight on death
 		if(gameMgr .playersDead){
 			flash_light.SetActive (false);
+			toggle = false;
 		}
 	}
 }

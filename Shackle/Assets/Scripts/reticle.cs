@@ -39,7 +39,6 @@ public class reticle : NetworkBehaviour {
 			if(Input.GetMouseButtonDown(0)){
 				//If the player click's on the door, open around parent pivot
 				if(hit.collider.name == "door"){
-					Debug.Log("OPEN SESAME BITCH");
 					hit.transform.parent.Rotate(Vector3.up, 90);
 				}
 
