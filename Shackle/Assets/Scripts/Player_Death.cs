@@ -8,6 +8,7 @@ public class Player_Death : NetworkBehaviour {
 	private Image reticleImage;
 	[SyncVar] public bool dead = false;
 	private bool once = false;
+	private bool monsterHit = false;
 
 	public GameObject deathOverlay;
 	public GameManager gameMgr;
@@ -22,13 +23,19 @@ public class Player_Death : NetworkBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if((Input.GetKey(KeyCode.K) || dead) && !once){
+		if((Input.GetKey(KeyCode.K) || monsterHit || dead) && !once){
 			enterDeathState();
 			once = true;
 		} else if (once && Input.anyKeyDown){
 			leaveDeathState();
 			once = false;
+			monsterHit = false;
 		}
+	}
+
+	void OnTriggerEnter(Collider col){
+		Debug.Log (col.gameObject.name);
+		if(col.gameObject.name == "P1 Monster")monsterHit = true;
 	}
 
 	//Removes reticle, brings in death overlay, and informs server/game manager of death
@@ -36,7 +43,7 @@ public class Player_Death : NetworkBehaviour {
 		dead = true;
 		reticleImage.enabled = false;
 		deathOverlay.transform.localPosition = new Vector3(0, 0, 0);
-		gameMgr .setMgrDeath(true);
+		gameMgr.setMgrDeath(true);
 		if(isLocalPlayer) CmdTellServerDeathState (true);
 	}
 
@@ -45,7 +52,7 @@ public class Player_Death : NetworkBehaviour {
 		dead = false;
 		reticleImage.enabled = true;
 		deathOverlay.transform.localPosition = new Vector3(0, 300, 0);
-		gameMgr .setMgrDeath(false);
+		gameMgr.setMgrDeath(false);
 		if(isLocalPlayer) CmdTellServerDeathState (false);
 	}
 

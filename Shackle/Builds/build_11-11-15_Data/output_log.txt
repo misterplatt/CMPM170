@@ -17,11 +17,82 @@ Loading E:\GitHub\CMPM170\Shackle\Builds\build_11-11-15_Data\Managed\UnityEngine
 Platform assembly: E:\GitHub\CMPM170\Shackle\Builds\build_11-11-15_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
 Loading E:\GitHub\CMPM170\Shackle\Builds\build_11-11-15_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
 Platform assembly: E:\GitHub\CMPM170\Shackle\Builds\build_11-11-15_Data\Managed\System.Core.dll (this message is harmless)
-- Completed reload, in  0.140 seconds
+- Completed reload, in  0.142 seconds
+desktop: 1920x1080 60Hz; virtual: 3840x1080 at 0,0
+<RI> Initializing input.
+<RI> Input initialized.
+<RI> Initialized touch support.
+Initialize engine version: 5.2.2f1 (3757309da7e7)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer: AMD Radeon HD 7800 Series (ID=0x6818)
+    Vendor:   ATI
+    VRAM:     2026 MB
+Begin MonoManager ReloadAssembly
+Platform assembly: E:\GitHub\CMPM170\Shackle\Builds\build_11-11-15_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading E:\GitHub\CMPM170\Shackle\Builds\build_11-11-15_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: E:\GitHub\CMPM170\Shackle\Builds\build_11-11-15_Data\Managed\Assembly-CSharp-firstpass.dll (this message is harmless)
+Loading E:\GitHub\CMPM170\Shackle\Builds\build_11-11-15_Data\Managed\Assembly-CSharp-firstpass.dll into Unity Child Domain
+Platform assembly: E:\GitHub\CMPM170\Shackle\Builds\build_11-11-15_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading E:\GitHub\CMPM170\Shackle\Builds\build_11-11-15_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: E:\GitHub\CMPM170\Shackle\Builds\build_11-11-15_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading E:\GitHub\CMPM170\Shackle\Builds\build_11-11-15_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: E:\GitHub\CMPM170\Shackle\Builds\build_11-11-15_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading E:\GitHub\CMPM170\Shackle\Builds\build_11-11-15_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+Platform assembly: E:\GitHub\CMPM170\Shackle\Builds\build_11-11-15_Data\Managed\System.Core.dll (this message is harmless)
+- Completed reload, in  0.045 seconds
 desktop: 1920x1080 60Hz; virtual: 3840x1080 at 0,0
 <RI> Initializing input.
 <RI> Input initialized.
 <RI> Initialized touch support.
 Platform assembly: E:\GitHub\CMPM170\Shackle\Builds\build_11-11-15_Data\Managed\System.dll (this message is harmless)
 Setting up 1 worker threads for Enlighten.
-  Thread -> id: f94 -> priority: 1 
+  Thread -> id: 12e4 -> priority: 1 
+Platform assembly: E:\GitHub\CMPM170\Shackle\Builds\build_11-11-15_Data\Managed\System.dll (this message is harmless)
+Setting up 1 worker threads for Enlighten.
+  Thread -> id: 1688 -> priority: 1 
+Socket: bind failed, error: Only one usage of each socket address (protocol/network address/port) is normally permitted.StartServer listen failed.
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+
+Socket: bind failed, error: Only one usage of each socket address (protocol/network address/port) is normally permitted.StartServer listen failed.
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+
+Socket: bind failed, error: Only one usage of each socket address (protocol/network address/port) is normally permitted.StartServer listen failed.
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+
+Socket: bind failed, error: Only one usage of each socket address (protocol/network address/port) is normally permitted.StartServer listen failed.
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+
+Socket: bind failed, error: Only one usage of each socket address (protocol/network address/port) is normally permitted.StartServer listen failed.
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+
+Socket: bind failed, error: Only one usage of each socket address (protocol/network address/port) is normally permitted.StartServer listen failed.
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+
+Socket: bind failed, error: Only one usage of each socket address (protocol/network address/port) is normally permitted.StartServer listen failed.
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+
+Socket: bind failed, error: Only one usage of each socket address (protocol/network address/port) is normally permitted.StartServer listen failed.
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+
+Socket: bind failed, error: Only one usage of each socket address (protocol/network address/port) is normally permitted.StartServer listen failed.
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+
+Socket: bind failed, error: Only one usage of each socket address (protocol/network address/port) is normally permitted.StartServer listen failed.
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+
+Socket: bind failed, error: Only one usage of each socket address (protocol/network address/port) is normally permitted.StartServer listen failed.
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+

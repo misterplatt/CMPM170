@@ -5,6 +5,7 @@ using System.Collections;
 public class GameManager : NetworkBehaviour {
 	
 	[SyncVar] public bool playersDead = false;
+	[SyncVar] public int flashlightCount = 0;
 	
 	// Use this for initialization
 	void Start () {
@@ -13,16 +14,32 @@ public class GameManager : NetworkBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-
+		Debug.Log (flashlightCount);
 	}
 
-	public void setMgrDeath(bool state){
-		playersDead = state;
-		CmdUpdateMgr(state);
+	//FLASHLIGHT SYNC
+	public void IncrementFlashlights(){
+		flashlightCount = flashlightCount + 1;
+		CmdUpdateFlashlights(flashlightCount);
+	}
+	public void DecrementFlashlights(){
+		flashlightCount = flashlightCount - 1;
+		CmdUpdateFlashlights(flashlightCount);
 	}
 
 	[Command]
-	void CmdUpdateMgr(bool state){
+	void CmdUpdateFlashlights(int count){
+		flashlightCount = count;
+	}
+
+	//DEATH SYNC
+	public void setMgrDeath(bool state){
+		playersDead = state;
+		CmdUpdateDeathState(state);
+	}
+
+	[Command]
+	void CmdUpdateDeathState(bool state){
 		playersDead = state;
 	}
 	

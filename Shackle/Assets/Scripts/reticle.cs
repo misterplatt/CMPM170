@@ -11,7 +11,8 @@ public class reticle : NetworkBehaviour {
 	public GameObject invRemote;
 	public GameObject invKey;
 	public GameObject invScrewdriver;
-	public GameObject player;
+	//public GameObject player;
+	public GameObject plugged;
 	public inventory inventoryManager;
 
 	void Awake () {
@@ -21,17 +22,20 @@ public class reticle : NetworkBehaviour {
 		invKey.SetActive (false);
 		invScrewdriver = GameObject.Find ("screwdriver_icon");
 		invScrewdriver.SetActive (false);
+		plugged = GameObject.Find ("outlet_plugged");
+		plugged.SetActive (false);
 		inventoryManager = GameObject.Find ("Inventory").GetComponent<inventory> ();
 	}
 	
 	// Update is called once per frame
 	void Update () {
 		//If players are not dead, let reticle cast for interaction
-		if(NetworkServer.active) ray = Camera.main.ScreenPointToRay(new Vector3(Camera.main.pixelWidth/2, Camera.main.pixelHeight/2, 0));
+		//if(NetworkServer.active) 
+		ray = Camera.main.ScreenPointToRay(new Vector3(Camera.main.pixelWidth/2, Camera.main.pixelHeight/2, 0));
 
 		//Reticle interaction options
 		if(Physics.Raycast(ray, out hit)){
-			//Debug.Log(hit.collider.name);
+			Debug.Log(hit.collider.name);
 			//Change reticle color when object is interactable
 			if(hit.collider.tag == "Interactable"){
 				this.GetComponent<Image>().color = Color.green;
@@ -44,6 +48,16 @@ public class reticle : NetworkBehaviour {
 				//If the player click's on the door, open around parent pivot
 				if(hit.collider.name == "door"){
 					hit.transform.parent.Rotate(Vector3.up, 90);
+				}
+				if(hit.collider.name == "wall-light"){
+					hit.transform.gameObject.GetComponentInChildren<Light>().enabled = !hit.transform.gameObject.GetComponentInChildren<Light>().enabled;
+				}
+				if(hit.collider.name == "TV"){
+					hit.transform.gameObject.GetComponentInChildren<SpriteRenderer>().enabled = !hit.transform.gameObject.GetComponentInChildren<SpriteRenderer>().enabled;
+				}
+				if(hit.collider.name == "outlet_unplugged"){
+					hit.transform.gameObject.SetActive(false);
+					plugged.SetActive (true);
 				}
 
 				//If click on key, destroy world instance and add to inventory
