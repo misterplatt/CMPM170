@@ -3,7 +3,7 @@ using System.Collections;
 
 public class inventory : MonoBehaviour {
 
-	public string[] items = new string[5];
+	public string[] items = new string[3];
 
 
 	// Use this for initialization
@@ -17,7 +17,7 @@ public class inventory : MonoBehaviour {
 	}
 
 	public void addItem (string itemName){
-		for(int i = 0; i < 5; i++) {
+		for(int i = 0; i < 3; i++) {
 			Debug.Log ("Check: " + items[i]);
 			if(items[i] == ""){
 				items[i] = itemName;

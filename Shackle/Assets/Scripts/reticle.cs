@@ -13,7 +13,11 @@ public class reticle : NetworkBehaviour {
 	public GameObject invScrewdriver;
 	//public GameObject player;
 	public GameObject plugged;
-	public inventory inventoryManager;
+	public GameManager gameMgr;
+		
+	public Sprite remoteSprite;
+	public Sprite keySprite;
+	public Sprite screwdriverSprite;
 
 	void Awake () {
 		invRemote = GameObject.Find ("remote_icon");
@@ -22,9 +26,10 @@ public class reticle : NetworkBehaviour {
 		invKey.SetActive (false);
 		invScrewdriver = GameObject.Find ("screwdriver_icon");
 		invScrewdriver.SetActive (false);
+
 		plugged = GameObject.Find ("outlet_plugged");
 		plugged.SetActive (false);
-		inventoryManager = GameObject.Find ("Inventory").GetComponent<inventory> ();
+		gameMgr = GameObject.Find ("GameManager").GetComponent<GameManager>();
 	}
 	
 	// Update is called once per frame
@@ -33,14 +38,20 @@ public class reticle : NetworkBehaviour {
 		//if(NetworkServer.active) 
 		ray = Camera.main.ScreenPointToRay(new Vector3(Camera.main.pixelWidth/2, Camera.main.pixelHeight/2, 0));
 
+		if(Input.GetKeyDown(KeyCode.D)){
+			//transform.GetChild (0).GetComponent<Image>().sprite = screwdriverSprite;
+		}
+
 		//Reticle interaction options
 		if(Physics.Raycast(ray, out hit)){
 			Debug.Log(hit.collider.name);
 			//Change reticle color when object is interactable
 			if(hit.collider.tag == "Interactable"){
-				this.GetComponent<Image>().color = Color.green;
+				GetComponent<Image>().color = Color.green;
+				transform.GetChild (0).GetComponent<Image>().color = Color.green;
 			} else {
-				this.GetComponent<Image>().color = Color.white;
+				GetComponent<Image>().color = Color.white;
+				transform.GetChild (0).GetComponent<Image>().color = Color.white;
 			}
 
 			//Specific object actions
@@ -51,8 +62,12 @@ public class reticle : NetworkBehaviour {
 				}
 				if(hit.collider.name == "wall-light"){
 					hit.transform.gameObject.GetComponentInChildren<Light>().enabled = !hit.transform.gameObject.GetComponentInChildren<Light>().enabled;
+					//Behaviour h = (Behaviour)hit.transform.GetChild (0).GetComponent("Halo");
+					//h.enabled = !h.enabled;
+					//hit.transform.GetChild(0).GetComponent(Halo).enabled = !hit.transform.gameObject.GetComponentInChildren<Halo>().enabled;
 				}
 				if(hit.collider.name == "TV"){
+					//if(GameObject
 					hit.transform.gameObject.GetComponentInChildren<SpriteRenderer>().enabled = !hit.transform.gameObject.GetComponentInChildren<SpriteRenderer>().enabled;
 				}
 				if(hit.collider.name == "outlet_unplugged"){
@@ -61,25 +76,24 @@ public class reticle : NetworkBehaviour {
 				}
 
 				//If click on key, destroy world instance and add to inventory
-				if(hit.collider.name == "remote"){
+				if(hit.collider.name == "remote" || gameMgr.holdingRemote){
 					Debug.Log("Got a remote!");
-					inventoryManager.addItem(hit.collider.name);
+					gameMgr.setMgrPickup(hit.collider.name, true);
 					invRemote.SetActive (true);
 					Destroy(hit.transform.gameObject);
 				}
-				if(hit.collider.name == "screwdriver"){
-					Debug.Log("Got a screwdriver!");
-					inventoryManager.addItem(hit.collider.name);
-					invScrewdriver.SetActive (true);
-					Destroy(hit.transform.gameObject);
-				}
-				if(hit.collider.name == "key"){
+				if(hit.collider.name == "key" || gameMgr.holdingKey){
 					Debug.Log("Got a key!");
-					inventoryManager.addItem(hit.collider.name);
+					gameMgr.setMgrPickup(hit.collider.name, true);
 					invKey.SetActive (true);
 					Destroy(hit.transform.gameObject);
 				}
-				
+				if(hit.collider.name == "screwdriver" || gameMgr.holdingScrewdriver){
+					Debug.Log("Got a screwdriver!");
+					gameMgr.setMgrPickup(hit.collider.name, true);
+					invScrewdriver.SetActive (true);
+					Destroy(hit.transform.gameObject);
+				}
 			}
 		}
 	}
