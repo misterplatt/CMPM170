@@ -1,9 +1,8 @@
 ﻿using UnityEngine;
+using UnityEngine.Networking;
 using System.Collections;
 
-public class P1_Monster : MonoBehaviour {
-
-	public GameManager gameMgr;
+public class P1_Monster : NetworkBehaviour {
 
 	private bool attacking = false;
 	private Vector3 initialPosition;
@@ -13,17 +12,18 @@ public class P1_Monster : MonoBehaviour {
 	private float timer = 0;
 
 	// Use this for initialization
-	void Awake () {
+	void Start () {
 		initialPosition = transform.position;
-		gameMgr = GameObject.Find ("GameManager").GetComponent<GameManager>();
 	}
 	
 	// Update is called once per frame
 	void Update () {
+		//Incurs warnings until game starts, but works as a prototype solution
+
 		//Flashlight counter
-		if(gameMgr.flashlightCount > 0){
+		if(NetworkServer.active){ //&& gameMgr.flashlightCount > 0){
 			timer += Time.deltaTime;
-			if(timer > 5) Attack ();
+			//if(timer > 5) Attack ();
 		} else {
 			timer = 0;
 		}

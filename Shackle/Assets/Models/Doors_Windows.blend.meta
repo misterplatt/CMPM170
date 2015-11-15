@@ -1,0 +1,113 @@
+fileFormatVersion: 2
+guid: 3c8c891d7a7e29d41be60be553ce7bc4
+timeCreated: 1447552915
+licenseType: Free
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: Door_Priv_Ledge_004
+    100002: Door_Priv_Ledge_005
+    100004: Door_Priv_Ledge_006
+    100006: Door_Priv_Ledge_007
+    100008: Door_Private_Handle_Back_L
+    100010: Door_Private_Handle_Front_L
+    100012: Door_Private_Leaf_L
+    100014: //RootNode
+    400000: Door_Priv_Ledge_004
+    400002: Door_Priv_Ledge_005
+    400004: Door_Priv_Ledge_006
+    400006: Door_Priv_Ledge_007
+    400008: Door_Private_Handle_Back_L
+    400010: Door_Private_Handle_Front_L
+    400012: Door_Private_Leaf_L
+    400014: //RootNode
+    2300000: Door_Priv_Ledge_004
+    2300002: Door_Priv_Ledge_005
+    2300004: Door_Priv_Ledge_006
+    2300006: Door_Priv_Ledge_007
+    2300008: Door_Private_Handle_Back_L
+    2300010: Door_Private_Handle_Front_L
+    2300012: Door_Private_Leaf_L
+    2300014: //RootNode
+    3300000: Door_Priv_Ledge_004
+    3300002: Door_Priv_Ledge_005
+    3300004: Door_Priv_Ledge_006
+    3300006: Door_Priv_Ledge_007
+    3300008: Door_Private_Handle_Back_L
+    3300010: Door_Private_Handle_Front_L
+    3300012: Door_Private_Leaf_L
+    3300014: //RootNode
+    4300000: Door_Private_L
+    4300002: Door_Private_Leaf_L
+    4300004: Door_Priv_Ledge_007
+    4300006: Door_Private_Handle_Front_L
+    4300008: Door_Private_Handle_Back_L
+    4300010: Door_Priv_Ledge_006
+    4300012: Door_Priv_Ledge_005
+    4300014: Door_Priv_Ledge_004
+    7400000: Default Take
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 3
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

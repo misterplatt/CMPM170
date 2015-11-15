@@ -10,6 +10,7 @@ public class flashlight : NetworkBehaviour {
 	void Awake (){
 		flash_light = GameObject.Find ("flashlight");
 		flash_light.SetActive (false);
+		GameObject.Find ("GameManager").SetActive(true);
 		gameMgr = GameObject.Find ("GameManager").GetComponent<GameManager>();
 	}
 	

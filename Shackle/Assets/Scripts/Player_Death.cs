@@ -26,7 +26,7 @@ public class Player_Death : NetworkBehaviour {
 		if((Input.GetKey(KeyCode.K) || monsterHit || dead) && !once){
 			enterDeathState();
 			once = true;
-		} else if (once && Input.anyKeyDown){
+		} else if (once && (Input.anyKeyDown || !dead)){
 			leaveDeathState();
 			once = false;
 			monsterHit = false;

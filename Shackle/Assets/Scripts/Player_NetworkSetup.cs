@@ -11,6 +11,7 @@ public class Player_NetworkSetup : NetworkBehaviour {
 	void Start () {
 		if (isLocalPlayer) {
 			//Enable certain elements on only the local player
+
 			GameObject.Find("Scene Camera").SetActive(false);
 			GameObject.Find ("Title").SetActive(false);
 			GetComponent<CharacterController>().enabled = true;
