@@ -9,6 +9,8 @@ public class Player_Inventory : NetworkBehaviour {
 	[SyncVar] public bool holdingKey = true;
 	[SyncVar] public bool holdingScrewdriver = true;
 
+	[SyncVar] public bool cablePlugged = false;
+
 	public Sprite currentReticle;
 
 	public Sprite plusSprite;
@@ -39,6 +41,17 @@ public class Player_Inventory : NetworkBehaviour {
 			holdingScrewdriver = true;
 			if(isLocalPlayer) CmdTellServerItems("screwdriver");
 		}
+
+		//Tell server plug has been placed
+		if(reticle.pluggedIn){
+			cablePlugged = true;
+			if(isLocalPlayer) CmdTellServerPlugged();
+		}
+		//Update other player
+		if(cablePlugged){
+			reticle.pluggedIn = true;
+		}
+
 
 		//If SyncVar is true, display inventory item for both players
 		if(holdingRemote) game_Refs.invRemote.SetActive (true);
@@ -114,5 +127,11 @@ public class Player_Inventory : NetworkBehaviour {
 		} else if(name == "screwdriver"){
 			holdingScrewdriver = true;
 		}
+	}
+
+	//Inform the server that cable was plugged in
+	[Command]
+	void CmdTellServerPlugged (){
+		cablePlugged = true;
 	}
 }

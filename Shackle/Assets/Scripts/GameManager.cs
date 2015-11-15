@@ -14,18 +14,17 @@ public class GameManager : NetworkBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		Debug.Log (flashlightCount);
 		gameObject.SetActive(true);
 	}
 
 	//FLASHLIGHT SYNC
 	public void IncrementFlashlights(){
 		flashlightCount = flashlightCount + 1;
-		CmdUpdateFlashlights(flashlightCount);
+		if(isLocalPlayer) CmdUpdateFlashlights(flashlightCount);
 	}
 	public void DecrementFlashlights(){
 		flashlightCount = flashlightCount - 1;
-		CmdUpdateFlashlights(flashlightCount);
+		if(isLocalPlayer) CmdUpdateFlashlights(flashlightCount);
 	}
 
 	[Command]

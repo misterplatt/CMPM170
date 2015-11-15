@@ -20,6 +20,8 @@ public class reticle : NetworkBehaviour {
 	public static bool keyHeld = false;
 	public static bool screwdriverHeld = false;
 
+	public static bool pluggedIn = false;
+
 	void Start () {
 		plugged = GameObject.Find ("outlet_plugged");
 		plugged.SetActive (false);
@@ -73,13 +75,14 @@ public class reticle : NetworkBehaviour {
 					h.enabled = !h.enabled;
 				}
 				//If player clicks on TV with remote selected, turn it on
-				if(hit.collider.name == "TV" && transform.GetChild(0).GetComponent<Image>().sprite == remoteSprite){
+				if(hit.collider.name == "TV" && transform.GetChild(0).GetComponent<Image>().sprite == remoteSprite && pluggedIn){
 					hit.transform.gameObject.GetComponentInChildren<SpriteRenderer>().enabled = !hit.transform.gameObject.GetComponentInChildren<SpriteRenderer>().enabled;
 				}
 				//If player clicks on plug, plug it into the wall
 				if(hit.collider.name == "outlet_unplugged"){
 					hit.transform.gameObject.SetActive(false);
 					plugged.SetActive (true);
+					pluggedIn = true;
 				}
 				//If click on key, destroy world instance and add to inventory
 				if(hit.collider.name == "remote"){
