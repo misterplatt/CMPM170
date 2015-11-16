@@ -21,7 +21,7 @@ public class P1_Monster : NetworkBehaviour {
 		//Flashlight counter
 		if(NetworkServer.active && GameObject.Find ("flashlight").activeSelf == true){
 			timer += Time.deltaTime;
-			if(timer > 5) Attack ();
+			if(timer > 7) Attack ();
 		} else {
 			timer = 0;
 		}

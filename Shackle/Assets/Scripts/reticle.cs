@@ -95,19 +95,16 @@ public class reticle : NetworkBehaviour {
 				if(hit.collider.name == "remote"){
 					Debug.Log("Got a remote!");
 					remoteHeld = true;
-					//invRemote.SetActive (true);
 					Destroy(hit.transform.gameObject);
 				}
 				if(hit.collider.name == "key"){
 					Debug.Log("Got a key!");
 					keyHeld = true;
-					//invKey.SetActive (true);
 					Destroy(hit.transform.gameObject);
 				}
 				if(hit.collider.name == "screwdriver"){
 					Debug.Log("Got a screwdriver!");
 					screwdriverHeld = true;
-					//invScrewdriver.SetActive (true);
 					Destroy(hit.transform.gameObject);
 				}
 			}

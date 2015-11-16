@@ -36,10 +36,12 @@ public class Player_Inventory : NetworkBehaviour {
 		if(reticle.remoteHeld){
 			holdingRemote = true;
 			if(isLocalPlayer) CmdTellServerItems("remote");
-		} else if(reticle.keyHeld){
+		} 
+		if(reticle.keyHeld){
 			holdingKey = true;
 			if(isLocalPlayer) CmdTellServerItems("key");
-		} else if(reticle.screwdriverHeld){
+		} 
+		if(reticle.screwdriverHeld){
 			holdingScrewdriver = true;
 			if(isLocalPlayer) CmdTellServerItems("screwdriver");
 		}
@@ -123,9 +125,11 @@ public class Player_Inventory : NetworkBehaviour {
 	void CmdTellServerItems (string name){
 		if(name == "remote"){
 			holdingRemote = true;
-		} else if(name == "key"){
+		} 
+		if(name == "key"){
 			holdingKey = true;
-		} else if(name == "screwdriver"){
+		} 
+		if(name == "screwdriver"){
 			holdingScrewdriver = true;
 		}
 	}
