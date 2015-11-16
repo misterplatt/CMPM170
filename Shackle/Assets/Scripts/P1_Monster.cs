@@ -18,12 +18,10 @@ public class P1_Monster : NetworkBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		//Incurs warnings until game starts, but works as a prototype solution
-
 		//Flashlight counter
-		if(NetworkServer.active){ //&& gameMgr.flashlightCount > 0){
+		if(NetworkServer.active && GameObject.Find ("flashlight").activeSelf == true){
 			timer += Time.deltaTime;
-			//if(timer > 5) Attack ();
+			if(timer > 5) Attack ();
 		} else {
 			timer = 0;
 		}
