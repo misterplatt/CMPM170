@@ -20,11 +20,11 @@ public class GameManager : NetworkBehaviour {
 	//FLASHLIGHT SYNC
 	public void IncrementFlashlights(){
 		flashlightCount = flashlightCount + 1;
-		if(isLocalPlayer) CmdUpdateFlashlights(flashlightCount);
+		CmdUpdateFlashlights(flashlightCount);
 	}
 	public void DecrementFlashlights(){
 		flashlightCount = flashlightCount - 1;
-		if(isLocalPlayer) CmdUpdateFlashlights(flashlightCount);
+		CmdUpdateFlashlights(flashlightCount);
 	}
 
 	[Command]

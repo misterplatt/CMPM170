@@ -15,7 +15,7 @@ public class Player_Death : NetworkBehaviour {
 	public reticle reticleScript;
 
 	// Use this for initialization
-	void Start () {
+	public override void OnStartLocalPlayer () {
 		deathOverlay = GameObject.Find ("Death Overlay");
 		reticleImage = GameObject.Find ("reticle").GetComponent<Image>();
 		gameMgr = GameObject.Find ("GameManager").GetComponent<GameManager>();
@@ -23,6 +23,7 @@ public class Player_Death : NetworkBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		//If the monster collides with a player, or someone press K while alive, enter death
 		if((Input.GetKey(KeyCode.K) || monsterHit || dead) && !once){
 			enterDeathState();
 			once = true;

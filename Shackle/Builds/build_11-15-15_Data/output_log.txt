@@ -17,7 +17,7 @@ Loading E:\GitHub\CMPM170\Shackle\Builds\build_11-15-15_Data\Managed\UnityEngine
 Platform assembly: E:\GitHub\CMPM170\Shackle\Builds\build_11-15-15_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
 Loading E:\GitHub\CMPM170\Shackle\Builds\build_11-15-15_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
 Platform assembly: E:\GitHub\CMPM170\Shackle\Builds\build_11-15-15_Data\Managed\System.Core.dll (this message is harmless)
-- Completed reload, in  0.144 seconds
+- Completed reload, in  0.146 seconds
 desktop: 1920x1080 60Hz; virtual: 3840x1080 at 0,0
 <RI> Initializing input.
 <RI> Input initialized.
