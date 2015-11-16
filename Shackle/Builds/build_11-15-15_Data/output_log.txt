@@ -2,10 +2,25 @@ Initialize engine version: 5.2.2f1 (3757309da7e7)
 GfxDevice: creating device client; threaded=1
 Direct3D:
     Version:  Direct3D 11.0 [level 11.0]
-    Renderer: AMD Radeon HD 7800 Series (ID=0x6818)
-    Vendor:   ATI
-    VRAM:     2026 MB
+    Renderer: Intel(R) HD Graphics 5600 (ID=0x1612)
+    Vendor:   Intel
+    VRAM:     128 MB
 Begin MonoManager ReloadAssembly
+<<<<<<< HEAD
+Platform assembly: C:\Users\Hayden\Desktop\CMPM170\Shackle\Builds\build_11-15-15_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\Users\Hayden\Desktop\CMPM170\Shackle\Builds\build_11-15-15_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Users\Hayden\Desktop\CMPM170\Shackle\Builds\build_11-15-15_Data\Managed\Assembly-CSharp-firstpass.dll (this message is harmless)
+Loading C:\Users\Hayden\Desktop\CMPM170\Shackle\Builds\build_11-15-15_Data\Managed\Assembly-CSharp-firstpass.dll into Unity Child Domain
+Platform assembly: C:\Users\Hayden\Desktop\CMPM170\Shackle\Builds\build_11-15-15_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\Users\Hayden\Desktop\CMPM170\Shackle\Builds\build_11-15-15_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: C:\Users\Hayden\Desktop\CMPM170\Shackle\Builds\build_11-15-15_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading C:\Users\Hayden\Desktop\CMPM170\Shackle\Builds\build_11-15-15_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: C:\Users\Hayden\Desktop\CMPM170\Shackle\Builds\build_11-15-15_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading C:\Users\Hayden\Desktop\CMPM170\Shackle\Builds\build_11-15-15_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+Platform assembly: C:\Users\Hayden\Desktop\CMPM170\Shackle\Builds\build_11-15-15_Data\Managed\System.Core.dll (this message is harmless)
+- Completed reload, in  0.038 seconds
+desktop: 1920x1080 60Hz; virtual: 1920x1080 at 0,0
+=======
 Platform assembly: E:\GitHub\CMPM170\Shackle\Builds\build_11-15-15_Data\Managed\UnityEngine.dll (this message is harmless)
 Loading E:\GitHub\CMPM170\Shackle\Builds\build_11-15-15_Data\Managed\UnityEngine.dll into Unity Child Domain
 Platform assembly: E:\GitHub\CMPM170\Shackle\Builds\build_11-15-15_Data\Managed\Assembly-CSharp-firstpass.dll (this message is harmless)
@@ -19,5 +34,46 @@ Loading E:\GitHub\CMPM170\Shackle\Builds\build_11-15-15_Data\Managed\UnityEngine
 Platform assembly: E:\GitHub\CMPM170\Shackle\Builds\build_11-15-15_Data\Managed\System.Core.dll (this message is harmless)
 - Completed reload, in  0.142 seconds
 desktop: 1920x1080 60Hz; virtual: 3840x1080 at 0,0
+>>>>>>> 3c1dbda3c29217fc2352f03c924dde004a0a7ba1
 <RI> Initializing input.
 <RI> Input initialized.
+<RI> Initialized touch support.
+Platform assembly: C:\Users\Hayden\Desktop\CMPM170\Shackle\Builds\build_11-15-15_Data\Managed\System.dll (this message is harmless)
+Setting up 2 worker threads for Enlighten.
+  Thread -> id: 2af4 -> priority: 1 
+  Thread -> id: 287c -> priority: 1 
+Log: cannot connect after 10 attempt address {::ffff:127.0.0.1:7777}
+UNet Client Disconnect Error: Timeout
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+
+Log: cannot connect after 10 attempt address {::ffff:127.0.0.1:7777}
+UNet Client Disconnect Error: Timeout
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+
+Log: cannot connect after 10 attempt address {::ffff:127.0.0.1:7777}
+UNet Client Disconnect Error: Timeout
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+
+Log: cannot connect after 10 attempt address {::ffff:127.0.0.1:7777}
+UNet Client Disconnect Error: Timeout
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+
+Log: cannot connect after 10 attempt address {::ffff:127.0.0.1:7777}
+UNet Client Disconnect Error: Timeout
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+
+Log: cannot connect after 10 attempt address {::ffff:127.0.0.1:7777}
+UNet Client Disconnect Error: Timeout
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+
+Log: cannot connect after 10 attempt address {::ffff:127.0.0.1:7777}
+UNet Client Disconnect Error: Timeout
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+
