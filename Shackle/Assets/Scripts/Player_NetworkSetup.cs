@@ -20,10 +20,12 @@ public class Player_NetworkSetup : NetworkBehaviour {
 	}
 
 	void Update(){
+		//Disconnect and show cursor
 		if(Input.GetKeyDown(KeyCode.Escape)){
 			NetworkManager.singleton.StopHost();
 			Cursor.visible = true;
 		} 
+		//Toggle cursor lock
 		if(Input.GetKeyDown(KeyCode.L)){
 			if(Cursor.lockState == CursorLockMode.Locked) {
 				Cursor.lockState = CursorLockMode.None;
@@ -33,8 +35,12 @@ public class Player_NetworkSetup : NetworkBehaviour {
 				Cursor.lockState = CursorLockMode.Locked;
 				Cursor.visible = false;
 			} 
-
 		}
+		Debug.Log (NetworkManager.singleton.matches);
+	}
+
+	void OnDisconnectedFromServer(NetworkDisconnection info){
+		Cursor.visible = true;
 	}
 
 }

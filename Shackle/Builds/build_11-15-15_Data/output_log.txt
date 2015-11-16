@@ -19,6 +19,24 @@ Loading C:\Users\Hayden\Desktop\CMPM170\Shackle\Builds\build_11-15-15_Data\Manag
 Platform assembly: C:\Users\Hayden\Desktop\CMPM170\Shackle\Builds\build_11-15-15_Data\Managed\System.Core.dll (this message is harmless)
 - Completed reload, in  0.197 seconds
 desktop: 1920x1080 60Hz; virtual: 1920x1080 at 0,0
+<<<<<<< HEAD
+=======
+=======
+Platform assembly: E:\GitHub\CMPM170\Shackle\Builds\build_11-15-15_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading E:\GitHub\CMPM170\Shackle\Builds\build_11-15-15_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: E:\GitHub\CMPM170\Shackle\Builds\build_11-15-15_Data\Managed\Assembly-CSharp-firstpass.dll (this message is harmless)
+Loading E:\GitHub\CMPM170\Shackle\Builds\build_11-15-15_Data\Managed\Assembly-CSharp-firstpass.dll into Unity Child Domain
+Platform assembly: E:\GitHub\CMPM170\Shackle\Builds\build_11-15-15_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading E:\GitHub\CMPM170\Shackle\Builds\build_11-15-15_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: E:\GitHub\CMPM170\Shackle\Builds\build_11-15-15_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading E:\GitHub\CMPM170\Shackle\Builds\build_11-15-15_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: E:\GitHub\CMPM170\Shackle\Builds\build_11-15-15_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading E:\GitHub\CMPM170\Shackle\Builds\build_11-15-15_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+Platform assembly: E:\GitHub\CMPM170\Shackle\Builds\build_11-15-15_Data\Managed\System.Core.dll (this message is harmless)
+- Completed reload, in  0.142 seconds
+desktop: 1920x1080 60Hz; virtual: 3840x1080 at 0,0
+>>>>>>> 3c1dbda3c29217fc2352f03c924dde004a0a7ba1
+>>>>>>> 5ce7a3c8e63909f092526f66206d1a86e7da97ab
 <RI> Initializing input.
 <RI> Input initialized.
 <RI> Initialized touch support.
