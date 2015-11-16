@@ -8,6 +8,8 @@ public class reticle : NetworkBehaviour {
 	Ray ray;
 	RaycastHit hit;
 
+	public GameObject winOverlay;
+
 	public GameObject plugged;
 	public Player_Inventory inventory;
 
@@ -23,6 +25,7 @@ public class reticle : NetworkBehaviour {
 	public static bool pluggedIn = false;
 
 	void Start () {
+		winOverlay = GameObject.Find ("Win Overlay");
 		plugged = GameObject.Find ("outlet_plugged");
 		plugged.SetActive (false);
 	}
@@ -34,11 +37,6 @@ public class reticle : NetworkBehaviour {
 			ray = Camera.main.ScreenPointToRay(new Vector3(Camera.main.pixelWidth/2, Camera.main.pixelHeight/2, 0));
 		}
 
-
-		//if(Input.GetKeyDown(KeyCode.D)){
-			//transform.GetChild (0).GetComponent<Image>().sprite = screwdriverSprite;
-		//}
-
 		//Reticle interaction options
 		if(Physics.Raycast(ray, out hit)){
 			//Debug.Log(hit.collider.name);
@@ -47,6 +45,9 @@ public class reticle : NetworkBehaviour {
 				GetComponent<Image>().color = Color.green;
 				transform.GetChild (0).GetComponent<Image>().color = Color.green;
 			} else if (hit.collider.name == "TV" && transform.GetChild(0).GetComponent<Image>().sprite == remoteSprite){
+				GetComponent<Image>().color = Color.green;
+				transform.GetChild (0).GetComponent<Image>().color = Color.green;
+			} else if (hit.collider.name == "airconditioner" && transform.GetChild(0).GetComponent<Image>().sprite == screwdriverSprite){
 				GetComponent<Image>().color = Color.green;
 				transform.GetChild (0).GetComponent<Image>().color = Color.green;
 			} else if (hit.collider.name == "door" && transform.GetChild(0).GetComponent<Image>().sprite == keySprite){
@@ -58,15 +59,15 @@ public class reticle : NetworkBehaviour {
 			}
 
 
-			//Specific object actions
+			//Specific object on-click actions
 			if(Input.GetMouseButtonDown(0)){
 				//If the player clicks on the door, open around parent pivot
 				if(hit.collider.name == "door" && transform.GetChild(0).GetComponent<Image>().sprite == keySprite){
-					Debug.Log(hit.transform.GetChild(2).name);
 					hit.transform.GetChild(2).localRotation = Quaternion.AngleAxis (30, Vector3.forward);
 					Behaviour h = (Behaviour)hit.transform.GetChild (3).GetComponent("Halo");
 					h.enabled = !h.enabled;
 					//WIN STATE
+					winOverlay.transform.localPosition = new Vector3(0, 0, 0);
 				}
 				//If player clicks on the light, toggle light and halo components
 				if(hit.collider.name == "wall-light"){
@@ -77,6 +78,12 @@ public class reticle : NetworkBehaviour {
 				//If player clicks on TV with remote selected, turn it on
 				if(hit.collider.name == "TV" && transform.GetChild(0).GetComponent<Image>().sprite == remoteSprite && pluggedIn){
 					hit.transform.gameObject.GetComponentInChildren<SpriteRenderer>().enabled = !hit.transform.gameObject.GetComponentInChildren<SpriteRenderer>().enabled;
+				}
+				//If player clicks on AC with key selected, open it and disable collider
+				if(hit.collider.name == "airconditioner" && transform.GetChild(0).GetComponent<Image>().sprite == screwdriverSprite){
+					//Debug.Log(hit.transform.GetChild(0).name);
+					hit.transform.gameObject.GetComponent<BoxCollider>().enabled = false;
+					hit.transform.GetChild(0).localRotation = Quaternion.AngleAxis (36, Vector3.up);
 				}
 				//If player clicks on plug, plug it into the wall
 				if(hit.collider.name == "outlet_unplugged"){

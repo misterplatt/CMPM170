@@ -18,6 +18,10 @@ public class NetworkManager_UI : NetworkManager {
 		NetworkManager.singleton.StartClient();
 	}
 
+	public void StartMatchmaking(){
+		NetworkManager.singleton.StartMatchMaker();
+	}
+
 	//Set IP address based on what user entered in the text field
 	void SetIPAddress(){
 		string ip = GameObject.Find ("IP_InputField").transform.FindChild("Text").GetComponent<Text>().text;
@@ -31,7 +35,6 @@ public class NetworkManager_UI : NetworkManager {
 
 	void OnLevelWasLoaded(int level){
 		if(level == 0) Invoke("SetupOfflineButtons", 0.3f);
-		else Invoke("SetupOnlineButtons", 0.3f);
 	}
 
 	//Reactivates the onClick listeners when returning to menu
@@ -41,12 +44,6 @@ public class NetworkManager_UI : NetworkManager {
 
 		GameObject.Find ("JoinButton").GetComponent<Button>().onClick.RemoveAllListeners();
 		GameObject.Find ("JoinButton").GetComponent<Button>().onClick.AddListener(JoinGame);
-	}
-
-	//Reactivates the onClick listeners when returning to menu
-	void SetupOnlineButtons(){
-		GameObject.Find ("HostButton").GetComponent<Button>().onClick.RemoveAllListeners();
-		GameObject.Find ("HostButton").GetComponent<Button>().onClick.AddListener(StartupHost);
 	}
 
 }

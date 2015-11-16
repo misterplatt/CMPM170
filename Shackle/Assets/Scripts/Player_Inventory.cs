@@ -18,10 +18,12 @@ public class Player_Inventory : NetworkBehaviour {
 	public Sprite keySprite;
 	public Sprite screwdriverSprite;
 
+	public GameManager gameMgr;
 	public GameManager_References game_Refs;
 
 	// Use this for initialization
 	void Start () {
+		gameMgr = GameObject.Find ("GameManager").GetComponent<GameManager>();
 		game_Refs = GameObject.Find("GameManager").GetComponent<GameManager_References>();
 		currentReticle = GameObject.Find("active").GetComponent<Image>().sprite;
 	}
@@ -60,7 +62,6 @@ public class Player_Inventory : NetworkBehaviour {
 
 		//RETICLE CYCLING
 		if(Input.GetKeyDown (KeyCode.D)){
-			Debug.Log ("SWAP IT");
 			//FROM PLUS
 			if(currentReticle == plusSprite){
 				if(holdingRemote) currentReticle = remoteSprite;
@@ -127,6 +128,17 @@ public class Player_Inventory : NetworkBehaviour {
 		} else if(name == "screwdriver"){
 			holdingScrewdriver = true;
 		}
+	}
+
+	//Inform the server of whether players are dead or alive, aka Sync it
+	[Command]
+	void CmdRemoveItems (){
+		reticle.remoteHeld = false;
+		reticle.keyHeld = false;
+		reticle.screwdriverHeld = false;
+		holdingRemote = false;
+		holdingKey = false;
+		holdingScrewdriver = false;
 	}
 
 	//Inform the server that cable was plugged in
