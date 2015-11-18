@@ -18,12 +18,34 @@ public class P1_Monster : NetworkBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		//Video monster spawn
+		if(NetworkServer.active && Input.GetKeyDown(KeyCode.Space)){
+			Attack ();
+		}
+		//Video attack sequence
+		if(attacking){
+			//Enter room
+			if(initialPosition.y - transform.position.y < yDistance){
+				transform.Translate(Vector3.up * 5 * Time.deltaTime);
+			} 
+			//Approach player
+			else if(initialPosition.z - transform.position.z < zDistance){
+				transform.Translate(Vector3.forward * 3 * Time.deltaTime);
+			}
+		}
+
+
 		//Flashlight counter
-		if(NetworkServer.active && GameObject.Find ("flashlight").activeSelf == true){
+		/*if(NetworkServer.active && GameObject.Find ("flashlight").activeSelf == true){
 			timer += Time.deltaTime;
 			if(timer > 7) Attack ();
 		} else {
 			timer = 0;
+		}
+
+		//Video monster spawn
+		if(NetworkServer.active && Input.GetKeyDown(KeyCode.Space)){
+			Attack ();
 		}
 
 		//Attack sequence
@@ -36,7 +58,7 @@ public class P1_Monster : NetworkBehaviour {
 			else if(initialPosition.z - transform.position.z < zDistance){
 				transform.Translate(Vector3.forward * Time.deltaTime);
 			}
-		}
+		}*/
 	}
 
 	void Attack(){
